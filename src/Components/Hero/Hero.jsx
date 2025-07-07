@@ -4,11 +4,13 @@ const Hero = () => {
   return (
     <section id="scrollspyHero" className="bg-primary py-10">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
-          <div className="lg:w-1/2 text-center lg:text-left">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-4">
+          <div className="lg:w-1/2 text-center lg:text-left ml-0 lg:ml-20">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               Hey, I'm <br />
-              <span className="text-secondary">Prathamesh Gokulkar</span>
+              <span className="text-secondary my-2 inline-block">
+                Prathamesh Gokulkar
+              </span>
             </h1>
             <p className="text-lg mb-6 text-white">
               I build web apps with Python & React.
@@ -23,7 +25,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="lg:w-1/2 text-center">
+          <div className="lg:w-1/2 text-center ">
             <img
               src="/assets/hero-home.png"
               alt="Hero"
