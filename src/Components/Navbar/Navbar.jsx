@@ -1,49 +1,95 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
+  useEffect(() => {
+    const handleResize = () => {
+      document.activeElement?.blur();
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <>
-      <div className="navbar bg-primary shadow-sm text-white">
-        <div className="navbar-start">
-          <a className="text-secondary font-bold text-xl">DevPortfolio</a>
-        </div>
-
-        <div className="navbar-end">
-          <div className="dropdown dropdown-end lg:hidden">
-            <label tabIndex={0} className="btn btn-ghost text-2xl">
-              <GiHamburgerMenu />
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-4 z-[1] p-2 shadow rounded-box bg-primary w-64 max-w-[90vw] text-white"
+    <nav className="navbar bg-primary shadow-sm text-white flex justify-end px-4">
+      {/* Mobile Dropdown */}
+      <div className="lg:hidden dropdown dropdown-end">
+        <button tabIndex={0} className="btn btn-ghost text-2xl">
+          <GiHamburgerMenu />
+        </button>
+        <ul
+          tabIndex={0}
+          className="menu menu-sm dropdown-content mt-4 z-[1] p-2 shadow rounded-box bg-primary w-64 text-white font-bold"
+        >
+          <li>
+            <Link
+              to="about"
+              smooth={true}
+              duration={500}
+              className="hover:text-secondary"
             >
-              <li className="py-3 px-2">
-                <a href="#about">About</a>
-              </li>
-              <li className="py-3 px-2">
-                <a href="#projects">Projects</a>
-              </li>
-              <li className="py-3 px-2">
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-
-          <ul className="menu menu-horizontal hidden lg:flex px-1">
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="projects"
+              smooth={true}
+              duration={500}
+              className="hover:text-secondary"
+            >
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="hover:text-secondary"
+            >
+              Contact
+            </Link>
+          </li>
+        </ul>
       </div>
-    </>
+
+      {/* Desktop Menu */}
+      <ul className="menu menu-horizontal hidden lg:flex gap-6 font-bold">
+        <li>
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            className="hover:text-secondary hover:underline underline-offset-4 decoration-2"
+          >
+            About
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="projects"
+            smooth={true}
+            duration={500}
+            className="hover:text-secondary hover:underline underline-offset-4 decoration-2"
+          >
+            Projects
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            className="hover:text-secondary hover:underline underline-offset-4 decoration-2"
+          >
+            Contact
+          </Link>
+        </li>
+      </ul>
+    </nav>
   );
 };
 

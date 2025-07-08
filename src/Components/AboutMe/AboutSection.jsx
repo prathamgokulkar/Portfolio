@@ -5,8 +5,10 @@ import AboutMe from "./AboutMe";
 const AboutSection = () => {
   return (
     <div>
-      <AboutMe></AboutMe>
-      <Skills></Skills>
+      <section id="about">
+        <AboutMe></AboutMe>
+        <Skills></Skills>
+      </section>
     </div>
   );
 };

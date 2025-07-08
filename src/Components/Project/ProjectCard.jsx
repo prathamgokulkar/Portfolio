@@ -1,0 +1,61 @@
+import React from "react";
+import { FaGithub } from "react-icons/fa";
+import { BiLinkExternal } from "react-icons/bi";
+
+const ProjectCard = ({ title, image, github, live, stack }) => {
+  return (
+    <div>
+      <div className="card w-80 bg-base-100 shadow-lg transition-transform duration-300 hover:scale-[1.02] group overflow-hidden">
+        <figure className="overflow-hidden">
+          <img
+            src={image}
+            alt={title}
+            className="object-cover h-48 w-full group-hover:scale-[1.03] transition-transform duration-300"
+          />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title">{title}</h2>
+
+          <div className="flex flex-wrap gap-2 mt-3">
+            {stack.map((tech, idx) => (
+              <span
+                key={idx}
+                className="text-xs bg-base-200 rounded-full px-3 py-1 flex items-center gap-1"
+              >
+                <img
+                  src={tech.icon}
+                  alt={tech.name}
+                  className="w-4 h-4 object-contain"
+                />
+                {tech.name}
+              </span>
+            ))}
+          </div>
+
+          <div className="card-actions justify-between mt-4">
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline btn-sm flex items-center gap-1"
+            >
+              <FaGithub />
+              Code
+            </a>
+            <a
+              href={live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary btn-sm flex items-center gap-1"
+            >
+              <BiLinkExternal />
+              Live
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProjectCard;

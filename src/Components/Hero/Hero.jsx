@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -17,10 +18,14 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button className="btn btn-secondary rounded-full px-4 btn-xs sm:btn-sm md:btn-md lg:btn-lg ">
-                Contact
+                <Link to="contact" smooth="true" duration={500}>
+                  Contacts
+                </Link>
               </button>
               <button className="btn btn-outline rounded-full px-4 border-white text-white btn-xs sm:btn-sm md:btn-md lg:btn-lg ">
-                View Projects
+                <Link to="projects" smooth="true" duration={500}>
+                  View Projects
+                </Link>
               </button>
             </div>
           </div>
