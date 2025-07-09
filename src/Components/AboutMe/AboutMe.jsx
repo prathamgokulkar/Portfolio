@@ -55,10 +55,11 @@ const AboutMe = () => {
         </div>
 
         <p className="mx-auto max-w-prose py-4">
-          I'm a passionate developer blending the power of Python and React to
-          build fast, modern, and meaningful web applications. Whether it's
-          crafting sleek user interfaces or building robust backend systems, I
-          love turning ideas into reality through code.
+          Persuing my Btech in Artificial Intelligence and Data science, I'm a
+          passionate developer blending the power of Python and React to build
+          fast, modern, and meaningful web applications. Whether it's crafting
+          sleek user interfaces or building robust backend systems, I love
+          turning ideas into reality through code.
         </p>
       </div>
     </div>
