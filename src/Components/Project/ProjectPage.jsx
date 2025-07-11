@@ -94,6 +94,17 @@ const ProjectPage = () => {
             { name: "MongoDB", icon: "/assets/Skills/MongoDB.png" },
           ]}
         />
+        <ProjectCard
+          title="EasyStay"
+          image="/assets/Project_Clicks/EasyStay.png"
+          github="https://github.com/prathamgokulkar/EasyStay"
+          live="https://easystay-2.onrender.com/listings"
+          stack={[
+            { name: "Express.js", icon: "/assets/Skills/express-js.png" },
+            { name: "Node.js", icon: "/assets/Skills/NodeJS.png" },
+            { name: "MongoDB", icon: "/assets/Skills/MongoDB.png" },
+          ]}
+        />
       </div>
     </div>
   );
