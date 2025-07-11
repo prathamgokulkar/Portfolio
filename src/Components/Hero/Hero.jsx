@@ -47,9 +47,13 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button className="btn btn-secondary rounded-full px-4 btn-xs sm:btn-sm md:btn-md lg:btn-lg ">
-                <Link to="contact" smooth={true} duration={500}>
-                  Contacts
-                </Link>
+                <a
+                  href="https://drive.google.com/file/d/1oPNVliMzFfBMnPwo27OgNpfLEZSbCSRZ/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View My Resume
+                </a>
               </button>
               <button className="btn btn-outline rounded-full px-4 border-white text-white btn-xs sm:btn-sm md:btn-md lg:btn-lg ">
                 <Link to="projects" smooth={true} duration={500}>
