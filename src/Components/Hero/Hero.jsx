@@ -48,7 +48,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button className="btn btn-secondary rounded-full px-4 btn-xs sm:btn-sm md:btn-md lg:btn-lg ">
                 <a
-                  href="https://drive.google.com/file/d/1oPNVliMzFfBMnPwo27OgNpfLEZSbCSRZ/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1V7RBSEHjYHAih9PdgFkMTjMoWti2aL2i/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
