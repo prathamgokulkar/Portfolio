@@ -23,11 +23,9 @@ const ProjectCard = ({ title, image, github, live, stack }) => {
                 key={idx}
                 className="text-xs bg-base-200 rounded-full px-3 py-1 flex items-center gap-1"
               >
-                <img
-                  src={tech.icon}
-                  alt={tech.name}
-                  className="w-4 h-4 object-contain"
-                />
+                <div className="flex items-center justify-center">
+                  {tech.icon}
+                </div>
                 {tech.name}
               </span>
             ))}

@@ -1,36 +1,78 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { IoLogoJavascript } from "react-icons/io5";
+import { FaReact, FaDatabase } from "react-icons/fa";
+import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
+import {
+  SiNodedotjs,
+  SiFastapi,
+  SiExpress,
+  SiMongodb,
+  SiPython,
+  SiTensorflow,
+  SiPandas,
+  SiNumpy,
+  SiSqlalchemy,
+} from "react-icons/si";
 
 const Skills = () => {
-  const skills = [
-    { name: "HTML", icon: "/assets/Skills/HTML.png" },
-    { name: "CSS", icon: "/assets/Skills/CSS3.png" },
-    { name: "JavaScript", icon: "/assets/Skills/JavaScript.png" },
-    { name: "React", icon: "/assets/Skills/React.png" },
-    { name: "Tailwind", icon: "/assets/Skills/Tailwind_CSS.png" },
-    { name: "Node.js", icon: "/assets/Skills/NodeJS.png" },
-    { name: "Python", icon: "/assets/Skills/Python.png" },
-    { name: "Express.js", icon: "/assets/Skills/express-js.png" },
-    { name: "MongoDB", icon: "/assets/Skills/MongoDB.png" },
-  ];
-
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [inView, controls]);
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
+  const skillCategories = {
+    "AI / ML": [
+      {
+        name: "Python",
+        icon: <SiPython className="text-blue-300" size={40} />,
+      },
+      { name: "Numpy", icon: <SiNumpy className="text-blue-400" size={40} /> },
+      {
+        name: "Pandas",
+        icon: <SiPandas className="text-green-400" size={40} />,
+      },
+      {
+        name: "Tensorflow",
+        icon: <SiTensorflow className="text-orange-400" size={40} />,
+      },
+    ],
+    Frontend: [
+      {
+        name: "JavaScript",
+        icon: <IoLogoJavascript className="text-yellow-400" size={40} />,
+      },
+      { name: "React", icon: <FaReact className="text-cyan-400" size={40} /> },
+      {
+        name: "Tailwind",
+        icon: <RiTailwindCssFill className="text-teal-400" size={40} />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-gray-200" size={40} />,
+      },
+    ],
+    Backend: [
+      {
+        name: "Node.js",
+        icon: <SiNodedotjs className="text-green-500" size={40} />,
+      },
+      {
+        name: "Express.js",
+        icon: <SiExpress className="text-gray-300" size={40} />,
+      },
+      {
+        name: "FastAPI",
+        icon: <SiFastapi className="text-[#009688]" size={40} />,
+      },
+    ],
+    Database: [
+      {
+        name: "MongoDB",
+        icon: <SiMongodb className="text-green-600" size={40} />,
+      },
+      { name: "SQL", icon: <FaDatabase className="text-blue-500" size={40} /> },
+      {
+        name: "SQLAlchemy",
+        icon: <SiSqlalchemy className="text-blue-500" size={40} />,
+      },
+    ],
   };
 
   const headingVariants = {
@@ -50,66 +92,78 @@ const Skills = () => {
     },
   };
 
-  const containerVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
-  };
-
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={cardVariants}
-    >
-      <div>
-        <div className="text-center mt-20 ">
-          <div className="text-center px-12 mt-20 mb-12" ref={ref}>
-            <motion.h1
-              className="text-4xl md:text-5xl font-bold mb-3 text-white"
-              variants={headingVariants}
-              initial="hidden"
-              animate={controls}
-            >
-              Skills
-            </motion.h1>
+    <div className="bg-black min-h-screen flex flex-col items-center justify-center px-6 md:px-12 py-16">
+      {/* Main Heading */}
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+        }}
+        className="text-center mb-12"
+      >
+        <motion.h1
+          className="text-3xl md:text-4xl font-bold mb-4 text-white"
+          variants={headingVariants}
+        >
+          Skills
+        </motion.h1>
+        <motion.div
+          className="h-1 bg-secondary rounded-full w-24 mx-auto mb-6"
+          variants={underlineVariants}
+          style={{ transformOrigin: "left", width: "100%" }}
+        />
+      </motion.div>
 
+      {/* Category Sections */}
+      <div className="space-y-16 w-full max-w-6xl">
+        {Object.entries(skillCategories).map(([category, skills], idx) => {
+          const controls = useAnimation();
+          const [ref, inView] = useInView({
+            triggerOnce: true,
+            threshold: 0.1,
+          });
+
+          useEffect(() => {
+            if (inView) controls.start("visible");
+          }, [inView, controls]);
+
+          return (
             <motion.div
-              className="h-1 bg-secondary rounded-full w-24 mx-auto mt-1"
-              variants={underlineVariants}
+              key={idx}
+              ref={ref}
               initial="hidden"
               animate={controls}
-              style={{ transformOrigin: "left" }}
-            />
-          </div>
-          <motion.div
-            className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-6 max-w-4xl mx-auto px-4 "
-            variants={containerVariants}
-            initial="hidden"
-            animate={controls}
-          >
-            {skills.map((skill, i) => (
-              <motion.div
-                key={i}
-                variants={cardVariants}
-                className="w-full max-w-[160px] mx-auto h-40 py-3 bg-base-200 text-md rounded-3xl shadow-sm flex flex-col items-center justify-center "
-              >
-                <img
-                  src={skill.icon}
-                  alt={skill.name}
-                  className="w-20 h-20 mb-2 object-contain hover:scale-[1.15] transition-all duration-300"
-                />
-                <span>{skill.name}</span>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+              }}
+            >
+              <h2 className="text-2xl font-semibold text-white mb-6 text-center">
+                {category}
+              </h2>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                {skills.map((skill, i) => (
+                  <div
+                    key={i}
+                    className="bg-neutral-900 rounded-2xl p-6 flex flex-col items-center justify-center shadow-md hover:scale-105 transition-transform"
+                  >
+                    <div className="w-20 h-20 flex items-center justify-center">
+                      {skill.icon}
+                    </div>
+                    <span className="text-white font-medium text-sm md:text-base mt-2">
+                      {skill.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          );
+        })}
       </div>
-    </motion.div>
+    </div>
   );
 };
 

@@ -24,32 +24,17 @@ const Navbar = () => {
           className="menu menu-sm dropdown-content mt-4 z-[1] p-2 shadow rounded-box bg-primary w-64 text-white font-bold"
         >
           <li>
-            <Link
-              to="about"
-              smooth={true}
-              duration={500}
-              className="hover:text-secondary"
-            >
+            <Link to="about" smooth={true} duration={500}>
               About
             </Link>
           </li>
           <li>
-            <Link
-              to="projects"
-              smooth={true}
-              duration={500}
-              className="hover:text-secondary"
-            >
+            <Link to="projects" smooth={true} duration={500}>
               Projects
             </Link>
           </li>
           <li>
-            <Link
-              to="contact"
-              smooth={true}
-              duration={500}
-              className="hover:text-secondary"
-            >
+            <Link to="contact" smooth={true} duration={500}>
               Contact
             </Link>
           </li>
@@ -63,7 +48,7 @@ const Navbar = () => {
             to="about"
             smooth={true}
             duration={500}
-            className="hover:text-secondary hover:underline underline-offset-4 decoration-2"
+            className="hover:underline underline-offset-4 decoration-2"
           >
             About
           </Link>
@@ -73,7 +58,7 @@ const Navbar = () => {
             to="projects"
             smooth={true}
             duration={500}
-            className="hover:text-secondary hover:underline underline-offset-4 decoration-2"
+            className="hover:underline underline-offset-4 decoration-2"
           >
             Projects
           </Link>
@@ -83,7 +68,7 @@ const Navbar = () => {
             to="contact"
             smooth={true}
             duration={500}
-            className="hover:text-secondary hover:underline underline-offset-4 decoration-2"
+            className="hover:underline underline-offset-4 decoration-2"
           >
             Contact
           </Link>

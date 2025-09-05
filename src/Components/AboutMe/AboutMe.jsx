@@ -7,13 +7,11 @@ const AboutMe = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.3 });
 
   useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
+    if (inView) controls.start("visible");
   }, [inView, controls]);
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
+  const headingVariants = {
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -30,38 +28,30 @@ const AboutMe = () => {
   };
 
   return (
-    <div>
-      <div className="text-center px-12 mt-20 mb-12" ref={ref}>
-        <div className="inline-block">
-          <motion.h1
-            className="text-4xl md:text-5xl font-bold mb-3 text-white"
-            variants={cardVariants}
-            initial="hidden"
-            animate={controls}
-          >
-            Who am I?
-          </motion.h1>
-
-          <motion.div
-            className="h-1 bg-secondary rounded-full mt-1"
-            variants={underlineVariants}
-            initial="hidden"
-            animate={controls}
-            style={{
-              transformOrigin: "left",
-              width: "100%",
-            }}
-          />
-        </div>
-
-        <p className="mx-auto max-w-prose py-4">
-          Persuing my Btech in Artificial Intelligence and Data science, I'm a
-          passionate developer blending the power of Python and React to build
-          fast, modern, and meaningful web applications. Whether it's crafting
-          sleek user interfaces or building robust backend systems, I love
-          turning ideas into reality through code.
-        </p>
+    <div className="bg-black py-16 flex flex-col items-center justify-center px-4 md:px-8">
+      <div className="inline-block">
+        <motion.h1
+          className="text-3xl md:text-4xl font-bold mb-4 text-white"
+          initial="hidden"
+          animate="visible"
+          variants={headingVariants}
+        >
+          Who am I?
+        </motion.h1>
+        <motion.div
+          className="h-1 bg-secondary rounded-full w-24 mx-auto mb-6"
+          initial="hidden"
+          animate="visible"
+          variants={underlineVariants}
+          style={{ transformOrigin: "left", width: "100%" }}
+        />
       </div>
+
+      <p className="text-gray-300 max-w-prose mx-auto text-center">
+        Pursuing my BTech in Artificial Intelligence and Data Science, I'm a
+        passionate developer blending Python and React to build fast, modern,
+        and meaningful web applications.
+      </p>
     </div>
   );
 };

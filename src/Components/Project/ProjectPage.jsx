@@ -1,34 +1,20 @@
-// import React from "react";
-// import ProjectCard from "./ProjectCard";
-
-// const ProjectPage = () => {
-//   return (
-//     <div className="px-4 sm:px-8 lg:px-20 py-10" id="projects">
-//       <h1 className="text-center py-12 text-4xl md:text-5xl font-bold mb-4 text-white underline decoration-secondary decoration-8 underline-offset-12">
-//         My Work
-//       </h1>
-//       <div className="flex flex-wrap justify-center gap-8">
-//         <ProjectCard
-//           title="Zerodha Clone"
-//           image="/assets/Project_Clicks/Zerodha-clone.png"
-//           github="https://github.com/prathamgokulkar/Zerodha_clone"
-//           live="https://zerodha-clone-fv2o.vercel.app/"
-//           stack={[
-//             { name: "React", icon: "/assets/Skills/React.png" },
-//             { name: "Express.js", icon: "/assets/Skills/express-js.png" },
-//             { name: "Node.js", icon: "/assets/Skills/NodeJS.png" },
-//             { name: "MongoDB", icon: "/assets/Skills/MongoDB.png" },
-//           ]}
-//         />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ProjectPage;
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { IoLogoJavascript } from "react-icons/io5";
+import { FaReact } from "react-icons/fa";
+import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
+import { FaDatabase } from "react-icons/fa";
+import {
+  SiNodedotjs,
+  SiFastapi,
+  SiExpress,
+  SiMongodb,
+  SiPython,
+  SiTensorflow,
+  SiPandas,
+  SiNumpy,
+} from "react-icons/si";
 import ProjectCard from "./ProjectCard";
 
 const ProjectPage = () => {
@@ -88,10 +74,22 @@ const ProjectPage = () => {
           github="https://github.com/prathamgokulkar/Zerodha_clone"
           live="https://zerodha-clone-fv2o.vercel.app/"
           stack={[
-            { name: "React", icon: "/assets/Skills/React.png" },
-            { name: "Express.js", icon: "/assets/Skills/express-js.png" },
-            { name: "Node.js", icon: "/assets/Skills/NodeJS.png" },
-            { name: "MongoDB", icon: "/assets/Skills/MongoDB.png" },
+            {
+              name: "React",
+              icon: <FaReact className="text-cyan-400" />,
+            },
+            {
+              name: "Express.js",
+              icon: <SiExpress className="text-gray-300" />,
+            },
+            {
+              name: "Node.js",
+              icon: <SiNodedotjs className="text-green-500" />,
+            },
+            {
+              name: "MongoDB",
+              icon: <SiMongodb className="text-green-600" />,
+            },
           ]}
         />
         <ProjectCard
@@ -100,9 +98,38 @@ const ProjectPage = () => {
           github="https://github.com/prathamgokulkar/EasyStay"
           live="https://easystay-2.onrender.com/listings"
           stack={[
-            { name: "Express.js", icon: "/assets/Skills/express-js.png" },
-            { name: "Node.js", icon: "/assets/Skills/NodeJS.png" },
-            { name: "MongoDB", icon: "/assets/Skills/MongoDB.png" },
+            {
+              name: "Express.js",
+              icon: <SiExpress className="text-gray-300" />,
+            },
+            {
+              name: "Node.js",
+              icon: <SiNodedotjs className="text-green-500" />,
+            },
+            {
+              name: "MongoDB",
+              icon: <SiMongodb className="text-green-600" />,
+            },
+          ]}
+        />
+        <ProjectCard
+          title="NutriGuide (Under progress)"
+          image="/assets/Project_Clicks/NutriGuide.png"
+          github="https://github.com/prathamgokulkar/NutriGuide"
+          live="#"
+          stack={[
+            {
+              name: "Python",
+              icon: <SiPython className="text-yellow-400" />,
+            },
+            {
+              name: "FastAPI",
+              icon: <SiFastapi className="text-[#009688]" />,
+            },
+            {
+              name: "NextJS",
+              icon: <FaReact className="text-blue-400" />,
+            },
           ]}
         />
       </div>

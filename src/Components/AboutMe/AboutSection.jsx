@@ -4,12 +4,10 @@ import AboutMe from "./AboutMe";
 
 const AboutSection = () => {
   return (
-    <div>
-      <section id="about">
-        <AboutMe></AboutMe>
-        <Skills></Skills>
-      </section>
-    </div>
+    <section id="about">
+      <AboutMe />
+      <Skills />
+    </section>
   );
 };
 
