@@ -49,10 +49,10 @@ const Hero = () => {
             <h2 className="text-lg md:text-2xl text-gray-300 font-medium mb-8">
               <Typewriter
                 words={[
-                  "AI/ML Learner",
-                  "Open to Internships",
-                  "Full-stack Developer",
-                  "AI/ML Enthusiast",
+                  "AI & Data Science Engineer",
+                  "Full-Stack Developer (MERN + FastAPI)",
+                  "RAG & LLM Application Developer",
+                  "Open to AI/ML & Software Internships",
                 ]}
                 loop={true}
                 cursor
@@ -64,9 +64,12 @@ const Hero = () => {
             </h2>
 
             <p className="text-lg md:text-xl mb-8 text-gray-200 max-w-xl">
-              Full-stack dev meets machine learning — I craft sleek, intelligent
-              apps using <strong>React</strong> and <strong>AI/ML</strong> to
-              solve real-world problems.
+              <p className="text-lg md:text-xl mb-8 text-gray-200 max-w-xl">
+                I build AI-powered, intelligent applications using{" "}
+                <strong>Machine Learning</strong>, <strong>LLMs</strong>, and{" "}
+                <strong>React</strong>/<strong>FastAPI</strong>, solving
+                real-world problems and delivering impactful experiences.
+              </p>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { IoLogoJavascript } from "react-icons/io5";
-import { FaReact, FaDatabase } from "react-icons/fa";
+import { FaReact, FaDatabase, FaGithub  } from "react-icons/fa";
 import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
 import {
   SiNodedotjs,
@@ -14,6 +14,10 @@ import {
   SiPandas,
   SiNumpy,
   SiSqlalchemy,
+  SiLangchain,
+  SiDocker,
+  SiPostman,
+  SiKubernetes,
 } from "react-icons/si";
 
 const Skills = () => {
@@ -21,16 +25,42 @@ const Skills = () => {
     "AI / ML": [
       {
         name: "Python",
-        icon: <SiPython className="text-blue-300" size={40} />,
+        icon: <SiPython className="text-yellow-300" size={40} />,
       },
-      { name: "Numpy", icon: <SiNumpy className="text-blue-400" size={40} /> },
+      { name: "NumPy", icon: <SiNumpy className="text-blue-400" size={40} /> },
       {
         name: "Pandas",
         icon: <SiPandas className="text-green-400" size={40} />,
       },
       {
-        name: "Tensorflow",
+        name: "TensorFlow",
         icon: <SiTensorflow className="text-orange-400" size={40} />,
+      },
+      {
+        name: "LangChain",
+        icon: <SiLangchain className="text-purple-400" size={40} />,
+      },
+      {
+        name: "LangGraph",
+        icon: <SiLangchain className="text-violet-400" size={40} />,
+      },
+    ],
+    "LLM / RAG": [
+      {
+        name: "FAISS",
+        icon: <FaDatabase className="text-yellow-400" size={40} />,
+      },
+      {
+        name: "ChromaDB",
+        icon: <FaDatabase className="text-green-400" size={40} />,
+      },
+      {
+        name: "Sentence Transformers",
+        icon: <SiPython className="text-blue-400" size={40} />,
+      },
+      {
+        name: "OpenAI API",
+        icon: <SiPython className="text-gray-400" size={40} />,
       },
     ],
     Frontend: [
@@ -40,15 +70,19 @@ const Skills = () => {
       },
       { name: "React", icon: <FaReact className="text-cyan-400" size={40} /> },
       {
-        name: "Tailwind",
-        icon: <RiTailwindCssFill className="text-teal-400" size={40} />,
-      },
-      {
         name: "Next.js",
         icon: <RiNextjsFill className="text-gray-200" size={40} />,
       },
+      {
+        name: "Tailwind",
+        icon: <RiTailwindCssFill className="text-teal-400" size={40} />,
+      },
     ],
     Backend: [
+      {
+        name: "FastAPI",
+        icon: <SiFastapi className="text-[#009688]" size={40} />,
+      },
       {
         name: "Node.js",
         icon: <SiNodedotjs className="text-green-500" size={40} />,
@@ -56,10 +90,6 @@ const Skills = () => {
       {
         name: "Express.js",
         icon: <SiExpress className="text-gray-300" size={40} />,
-      },
-      {
-        name: "FastAPI",
-        icon: <SiFastapi className="text-[#009688]" size={40} />,
       },
     ],
     Database: [
@@ -71,6 +101,21 @@ const Skills = () => {
       {
         name: "SQLAlchemy",
         icon: <SiSqlalchemy className="text-blue-500" size={40} />,
+      },
+    ],
+    "DevOps / Tools": [
+      {
+        name: "Docker",
+        icon: <SiDocker className="text-blue-400" size={40} />,
+      },
+      { name: "Git", icon: <FaGithub className="text-gray-200" size={40} /> },
+      {
+        name: "Postman",
+        icon: <SiPostman className="text-orange-500" size={40} />,
+      },
+      {
+        name: "Kubernetes (learning)",
+        icon: <SiKubernetes className="text-blue-500" size={40} />,
       },
     ],
   };

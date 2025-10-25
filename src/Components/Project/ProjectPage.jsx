@@ -1,19 +1,20 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { IoLogoJavascript } from "react-icons/io5";
 import { FaReact } from "react-icons/fa";
-import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
 import { FaDatabase } from "react-icons/fa";
 import {
   SiNodedotjs,
   SiFastapi,
   SiExpress,
   SiMongodb,
+  SiHuggingface,
   SiPython,
-  SiTensorflow,
-  SiPandas,
-  SiNumpy,
+  SiStreamlit,
+  SiPostgresql,
+  SiPytorch,
+  SiLangchain,
+  SiDocker,
 } from "react-icons/si";
 import ProjectCard from "./ProjectCard";
 
@@ -69,26 +70,102 @@ const ProjectPage = () => {
 
       <div className="flex flex-wrap justify-center gap-8">
         <ProjectCard
-          title="Zerodha Clone"
-          image="/assets/Project_Clicks/Zerodha-clone.png"
-          github="https://github.com/prathamgokulkar/Zerodha_clone"
-          live="https://zerodha-clone-fv2o.vercel.app/"
+          title="NutriGuide – AI-Powered Personalized Nutrition & Recipe Assistant"
+          image="/assets/Project_Clicks/NutriGuide.png"
+          github="https://github.com/prathamgokulkar/NutriGuide"
+          live="https://drive.google.com/file/d/1Cob_HHlevTKpgNGs3F-8hw6CdpClRBuE/view?usp=drive_link"
           stack={[
             {
+              name: "FastAPI",
+              icon: <SiFastapi className="text-[#009688]" />,
+            },
+            {
+              name: "LangChain",
+              icon: <SiLangchain className="text-[#4A90E2]" />,
+            },
+            {
+              name: "NextJS",
+              icon: <FaReact className="text-blue-400" />,
+            },
+            {
+              name: "ChromaDB",
+              icon: <FaDatabase className="text-yellow-400" />,
+            },
+            {
+              name: "Hugging Face API",
+              icon: <SiHuggingface className="text-yellow-500" />,
+            },
+          ]}
+        />
+        <ProjectCard
+          title="DevTalk"
+          image="/assets/Project_Clicks/DevTalk.png"
+          github="https://github.com/prathamgokulkar/DevTalk"
+          live="https://drive.google.com/file/d/13tvc-Ptfq5PCKqYJWiorZrgjQJNFw3H3/view?usp=drive_link"
+          stack={[
+            {
+              name: "Streamlit",
+              icon: <SiStreamlit className="text-[#009688]" />,
+            },
+            {
+              name: "Hugging Face API",
+              icon: <SiHuggingface className="text-yellow-500" />,
+            },
+            {
+              name: "PyTorch",
+              icon: <SiPytorch className="text-[#4A90E2]" />,
+            },
+            {
+              name: "Python",
+              icon: <SiPython className="text-yellow-400" />,
+            },
+          ]}
+        />
+        <ProjectCard
+          title="IntelliAgent AI: Multi-Agent PDF Chat"
+          image="/assets/Project_Clicks/Intelliagent.png"
+          github="https://github.com/prathamgokulkar/IntelliAgent"
+          live="#"
+          stack={[
+            {
+              name: "FastAPI",
+              icon: <SiFastapi className="text-[#009688]" />,
+            },
+            {
+              name: "LangChain",
+              icon: <SiLangchain className="text-yellow-500" />,
+            },
+            {
+              name: "Docker",
+              icon: <SiDocker className="text-yellow-400" />,
+            },
+            {
               name: "React",
-              icon: <FaReact className="text-cyan-400" />,
+              icon: <FaReact className="text-yellow-400" />,
             },
             {
-              name: "Express.js",
-              icon: <SiExpress className="text-gray-300" />,
+              name: "Python",
+              icon: <SiPython className="text-yellow-400" />,
+            },
+          ]}
+        />
+        <ProjectCard
+          title="Generative Search Engine"
+          image="/assets/Project_Clicks/SearchEngine.png"
+          github="https://github.com/prathamgokulkar/Search-engine-pipeline"
+          live="https://search-engine-pipeline-prathamg.streamlit.app/"
+          stack={[
+            {
+              name: "Streamlit",
+              icon: <SiStreamlit className="text-[#009688]" />,
             },
             {
-              name: "Node.js",
-              icon: <SiNodedotjs className="text-green-500" />,
+              name: "LangChain",
+              icon: <SiLangchain className="text-yellow-500" />,
             },
             {
-              name: "MongoDB",
-              icon: <SiMongodb className="text-green-600" />,
+              name: "Python",
+              icon: <SiPython className="text-yellow-400" />,
             },
           ]}
         />
@@ -109,26 +186,6 @@ const ProjectPage = () => {
             {
               name: "MongoDB",
               icon: <SiMongodb className="text-green-600" />,
-            },
-          ]}
-        />
-        <ProjectCard
-          title="NutriGuide (Under progress)"
-          image="/assets/Project_Clicks/NutriGuide.png"
-          github="https://github.com/prathamgokulkar/NutriGuide"
-          live="#"
-          stack={[
-            {
-              name: "Python",
-              icon: <SiPython className="text-yellow-400" />,
-            },
-            {
-              name: "FastAPI",
-              icon: <SiFastapi className="text-[#009688]" />,
-            },
-            {
-              name: "NextJS",
-              icon: <FaReact className="text-blue-400" />,
             },
           ]}
         />

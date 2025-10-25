@@ -48,9 +48,13 @@ const AboutMe = () => {
       </div>
 
       <p className="text-gray-300 max-w-prose mx-auto text-center">
-        Pursuing my BTech in Artificial Intelligence and Data Science, I'm a
-        passionate developer blending Python and React to build fast, modern,
-        and meaningful web applications.
+        I am a final-year B.Tech student in Artificial Intelligence and Data
+        Science with hands-on experience in building AI-powered and full-stack
+        web applications. Skilled in <strong>Python</strong>,{" "}
+        <strong>React</strong>, <strong>FastAPI</strong>, and{" "}
+        <strong>Machine Learning</strong>, I design scalable, intelligent
+        solutions that solve real-world problems and deliver impactful user
+        experiences.
       </p>
     </div>
   );
