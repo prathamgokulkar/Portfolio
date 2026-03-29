@@ -98,7 +98,7 @@ const ProjectPage = () => {
           ]}
         />
         <ProjectCard
-          title="DevTalk"
+          title="DevTalk: A 0.6B Parameter Fine-Tuned AI Code Assistant"
           image="/assets/Project_Clicks/DevTalk.png"
           github="https://github.com/prathamgokulkar/DevTalk"
           live="https://drive.google.com/file/d/13tvc-Ptfq5PCKqYJWiorZrgjQJNFw3H3/view?usp=drive_link"
@@ -122,9 +122,9 @@ const ProjectPage = () => {
           ]}
         />
         <ProjectCard
-          title="IntelliAgent AI: Multi-Agent PDF Chat"
-          image="/assets/Project_Clicks/Intelliagent.png"
-          github="https://github.com/prathamgokulkar/IntelliAgent"
+          title="SmartScan: A Multi-Agent RAG System"
+          image="/assets/Project_Clicks/Smartscan.png"
+          github="https://github.com/prathamgokulkar/SmartScan"
           live="#"
           stack={[
             {

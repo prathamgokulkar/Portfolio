@@ -102,20 +102,27 @@ const ContactSection = () => {
         className="flex flex-wrap justify-center gap-6"
         variants={containerVariants}
       >
-        {socialLinks.map((link, idx) => (
-          <motion.a
-            key={idx}
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            variants={itemVariants}
-            className="flex flex-col items-center justify-center w-20 h-20 bg-base-200 rounded-full text-white text-xl shadow-md hover:bg-secondary hover:scale-110 transition-transform duration-300 cursor-pointer"
-            title={link.label}
-          >
-            {link.icon}
-            <span className="text-sm mt-1">{link.label}</span>
-          </motion.a>
-        ))}
+        {socialLinks.map((link, idx) => {
+          const isMail = link.href.startsWith("mailto:");
+          const href = isMail
+            ? `https://mail.google.com/mail/?view=cm&to=${link.href.replace("mailto:", "")}`
+            : link.href;
+
+          return (
+            <motion.a
+              key={idx}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={itemVariants}
+              className="flex flex-col items-center justify-center w-20 h-20 bg-base-200 rounded-full text-white text-xl shadow-md hover:bg-secondary hover:scale-110 transition-transform duration-300 cursor-pointer"
+              title={link.label}
+            >
+              {link.icon}
+              <span className="text-sm mt-1">{link.label}</span>
+            </motion.a>
+          );
+        })}
       </motion.div>
     </section>
   );

@@ -40,7 +40,7 @@ const Hero = () => {
             animate={controls}
           >
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4 text-white">
-              Hey, I'm <br />
+              Hello, I'm <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#aa94f7] to-[#4313ec] my-2 inline-block">
                 Prathamesh Gokulkar
               </span>
@@ -52,7 +52,8 @@ const Hero = () => {
                   "AI & Data Science Engineer",
                   "Full-Stack Developer (MERN + FastAPI)",
                   "RAG & LLM Application Developer",
-                  "Open to AI/ML & Software Internships",
+                  "AI Engineer with Industry Experience",
+                  "Open to Full-Time AI/ML Roles",
                 ]}
                 loop={true}
                 cursor
@@ -64,12 +65,9 @@ const Hero = () => {
             </h2>
 
             <p className="text-lg md:text-xl mb-8 text-gray-200 max-w-xl">
-              <p className="text-lg md:text-xl mb-8 text-gray-200 max-w-xl">
-                I build AI-powered, intelligent applications using{" "}
-                <strong>Machine Learning</strong>, <strong>LLMs</strong>, and{" "}
-                <strong>React</strong>/<strong>FastAPI</strong>, solving
-                real-world problems and delivering impactful experiences.
-              </p>
+                With 5+ months of industry experience, I engineer AI-powered solutions using <strong>Machine Learning</strong>, <strong>LLMs</strong>, and{" "}
+                <strong>React</strong>/<strong>FastAPI</strong>, from RAG pipelines to
+                production-grade full-stack applications.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

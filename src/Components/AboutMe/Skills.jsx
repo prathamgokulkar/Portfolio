@@ -17,7 +17,8 @@ import {
   SiLangchain,
   SiDocker,
   SiPostman,
-  SiKubernetes,
+  SiGooglecloud,
+  SiGooglegemini,
 } from "react-icons/si";
 
 const Skills = () => {
@@ -61,6 +62,10 @@ const Skills = () => {
       {
         name: "OpenAI API",
         icon: <SiPython className="text-gray-400" size={40} />,
+      },
+      {
+        name: "Groq / Gemini API",
+        icon: <SiGooglegemini className="text-blue-500" size={40} />,
       },
     ],
     Frontend: [
@@ -114,8 +119,8 @@ const Skills = () => {
         icon: <SiPostman className="text-orange-500" size={40} />,
       },
       {
-        name: "Kubernetes (learning)",
-        icon: <SiKubernetes className="text-blue-500" size={40} />,
+        name: "GCP / Cloud Run",
+        icon: <SiGooglecloud className="text-blue-400" size={40} />,
       },
     ],
   };

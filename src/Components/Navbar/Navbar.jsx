@@ -29,6 +29,11 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
+            <Link to="experience" smooth={true} duration={500}>
+              Experience
+            </Link>
+          </li>
+          <li>
             <Link to="projects" smooth={true} duration={500}>
               Projects
             </Link>
@@ -51,6 +56,16 @@ const Navbar = () => {
             className="hover:underline underline-offset-4 decoration-2"
           >
             About
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="experience"
+            smooth={true}
+            duration={500}
+            className="hover:underline underline-offset-4 decoration-2"
+          >
+            Experience
           </Link>
         </li>
         <li>

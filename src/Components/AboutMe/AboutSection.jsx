@@ -5,7 +5,7 @@ import AboutMe from "./AboutMe";
 const AboutSection = () => {
   return (
     <section id="about">
-      <AboutMe />
+      {/* <AboutMe /> */}
       <Skills />
     </section>
   );
