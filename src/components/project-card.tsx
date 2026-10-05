@@ -31,6 +31,9 @@ interface Props {
   description: string;
   dates: string;
   tags: readonly string[];
+  achievement?: string;
+  pipeline?: string;
+  metrics?: readonly { value: string; label: string }[];
   link?: string;
   image?: string;
   video?: string;
@@ -48,12 +51,16 @@ export function ProjectCard({
   description,
   dates,
   tags,
-  link,
+  achievement,
+  pipeline,
+  metrics,
   image,
   video,
   links,
   className,
 }: Props) {
+  const visibleLinks = links?.filter((item) => item.href && item.href !== "#");
+
   return (
     <div
       className={cn(
@@ -83,9 +90,9 @@ export function ProjectCard({
             <div className="w-full h-48 bg-muted" />
           )}
         </Link>
-        {links && links.length > 0 && (
+        {visibleLinks && visibleLinks.length > 0 && (
           <div className="absolute top-2 right-2 flex flex-wrap gap-2">
-            {links.map((link, idx) => (
+            {visibleLinks.map((link, idx) => (
               <Link
                 href={link.href}
                 key={idx}
@@ -109,7 +116,14 @@ export function ProjectCard({
         <div className="flex items-start justify-between gap-2">
           <div className="flex flex-col gap-1">
             <h3 className="font-semibold">{title}</h3>
-            <time className="text-xs text-muted-foreground">{dates}</time>
+            {achievement ? (
+              <p className="text-xs font-medium text-foreground/80">
+                {achievement}
+              </p>
+            ) : null}
+            {dates ? (
+              <time className="text-xs text-muted-foreground">{dates}</time>
+            ) : null}
           </div>
           <Link
             href={href || "#"}
@@ -121,9 +135,31 @@ export function ProjectCard({
             <ArrowUpRight className="h-4 w-4" aria-hidden />
           </Link>
         </div>
-        <div className="text-xs flex-1 prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
+        <div className="text-sm flex-1 prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
           <Markdown>{description}</Markdown>
         </div>
+        {pipeline ? (
+          <p className="text-[11px] leading-relaxed font-mono text-muted-foreground">
+            {pipeline}
+          </p>
+        ) : null}
+        {metrics && metrics.length > 0 && (
+          <div className="grid grid-cols-2 gap-2">
+            {metrics.map((metric) => (
+              <div
+                key={metric.label}
+                className="rounded-lg border border-border bg-muted/40 px-2.5 py-2"
+              >
+                <p className="text-sm font-semibold text-foreground">
+                  {metric.value}
+                </p>
+                <p className="text-[11px] text-muted-foreground leading-snug">
+                  {metric.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-auto">
             {tags.map((tag) => (

@@ -1,14 +1,13 @@
 export const user = {
   name: "Prathamesh Gokulkar",
-  tagline: "AI & Data Science Engineer",
-  bio: `With 5+ months of industry experience, I engineer AI-powered solutions using Machine Learning, LLMs, and React/FastAPI — from RAG pipelines to production-grade full-stack applications.`,
-  aboutMe: `I am a final-year B.Tech student in Artificial Intelligence and Data Science with hands-on experience in building AI-powered and full-stack web applications. Skilled in Python, React, FastAPI, and Machine Learning, I design scalable, intelligent solutions that solve real-world problems and deliver impactful user experiences.`,
+  tagline: "AI Engineer",
+  bio: `AI Engineer building production-grade AI applications, LLM pipelines, RAG systems, and agentic workflows.`,
+  aboutMe: `I'm an AI Engineer focused on building practical AI systems using LLMs, RAG, agentic workflows, and modern backend infrastructure. I've worked across document intelligence, healthcare chatbots, LLM pipelines, model fine-tuning, and production AI applications. Currently an AI Engineer at Intlnc AI.`,
   roles: [
-    "AI & Data Science Engineer",
-    "Full-Stack Developer (MERN + FastAPI)",
-    "RAG & LLM Application Developer",
-    "AI Engineer with Industry Experience",
-    "Open to Full-Time AI/ML Roles",
+    "AI Engineer",
+    "LLM Pipelines & RAG",
+    "Agentic Workflows",
+    "Production AI Applications",
   ],
   resumeUrl:
     "https://drive.google.com/file/d/1mPwo4VkivB4PtVI40nxJPAEuYiEaCj6c/view?usp=sharing",
