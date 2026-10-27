@@ -10,7 +10,7 @@ export const user = {
     "Production AI Applications",
   ],
   resumeUrl:
-    "https://drive.google.com/file/d/1mPwo4VkivB4PtVI40nxJPAEuYiEaCj6c/view?usp=sharing",
+    "https://drive.google.com/file/d/15M-BNDwfvjFyEIpw5JLbt7vISkV0XK6O/view?usp=sharing",
   email: "prathamgokulkar@gmail.com",
   socials: [
     {

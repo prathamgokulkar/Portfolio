@@ -1,5 +1,8 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon } from "lucide-react";
+import { FileText, HomeIcon } from "lucide-react";
+
+const resumeUrl =
+  "https://drive.google.com/file/d/15M-BNDwfvjFyEIpw5JLbt7vISkV0XK6O/view?usp=sharing";
 
 export const DATA = {
   name: "Prathamesh Gokulkar",
@@ -19,6 +22,7 @@ I enjoy working at the intersection of AI, software engineering, and product req
 
 Currently, I'm an AI Engineer at Intlnc AI, building AI applications against real client requirements.`,
   avatarUrl: "/me.png",
+  resumeUrl,
   highlights: [
     { value: "3rd / 48", label: "Technokratia 2026" },
     { value: "98% OCR", label: "SmartScan AI accuracy" },
@@ -107,7 +111,10 @@ Currently, I'm an AI Engineer at Intlnc AI, building AI applications against rea
       skills: ["LangSmith", "Git / GitHub"],
     },
   ],
-  navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
+  navbar: [
+    { href: "/", icon: HomeIcon, label: "Home" },
+    { href: resumeUrl, icon: FileText, label: "Resume" },
+  ],
   contact: {
     email: "prathamgokulkar@gmail.com",
     social: {
